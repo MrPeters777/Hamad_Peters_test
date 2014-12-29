@@ -1,0 +1,25 @@
+Extranet Name,NewName,NewName2,MeasureType
+30-day all cause Readmission Count THA,THA 30-day Readmit Count,THA 30-day Readmit Count,CountLow
+30-day all cause Readmission Count TKA,TKA 30-day Readmit Count,TKA 30-day Readmit Count,CountLow
+30-day all cause Readmission Rate THA,THA 30-day R. Rate,THA 30-day R. Rate,Percent
+30-day all cause Readmission Rate TKA,TKA 30-day R. Rate,TKA 30-day R. Rate,Percent
+Average LOS THA,THA LOS,THA LOS,Days
+Average LOS TKA,TKA LOS,TKA LOS,Days
+Number of Patients with THA,THA N,THA N,CountHi
+Number of Patients with TKA,TKA N,TKA N,CountHi
+Percent Discharged Home THA,THA PctDxHome,THA Pct Dx Home,Percent
+Percent Discharged Home TKA,TKA PctDxHome,TKA Pct Dx Home,Percent
+Percent Discharged to rehab - inpatient THA,THA PctDxRehab,THA Pct Dx Rehab,Percent
+Percent Discharged to rehab - inpatient TKA,TKA PctDxRehab,TKA Pct Dx Rehab,Percent
+Percent Discharged to rehab - SNF THA,THA PctDxSNF,THA Pct Dx SNF,Percent
+Percent Discharged to rehab - SNF TKA,TKA PctDxSNF,TKA Pct Dx SNF,Percent
+Percent Pre-Surgery PRO Administration,All PctPROPre,All PctPRO PreOp,Percent
+Percent SCIP-Inf-3d Antibiotics stopped at 24 hours THA,THA PctSCIP3,THA Pct SCIP3,Percent
+Percent SCIP-Inf-3d Antibiotics stopped at 24 hours TKA,TKA PctSCIP3,TKA Pct SCIP3,Percent
+Percent SCIP-Inf-2d Appropriate Antibiotic THA,THA PctSCIP2,THA Pct SCIP2,Percent
+Percent SCIP-Inf-2d Appropriate Antibiotic TKA,TKA PctSCIP2,TKA Pct SCIP2,Percent
+Percent SCIP-Inf-1d Antibiotics given within 1 hour THA,THA PctSCIP1,THA Pct SCIP1,Percent
+Percent SCIP-Inf-1d Antibiotics given within 1 hour TKA,TKA PctSCIP1,TKA Pct SCIP1,Percent
+Percent THA Patients with PRO before surgery,THA PctPROPre,THA Pct PRO PreOp,Percent
+Percent TKA Patients with PRO before surgery,TKA PctPROPre,TKA Pct PRO PreOp,Percent
+,,,
