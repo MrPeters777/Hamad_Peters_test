@@ -1,10 +1,8 @@
 # KL 4 June 2014
+# BP 20150116
+# enter desc here when finished !!!!!!!!!
 
-############
-# Plots by hospital name
-# prepare the CSV data dump, appending volume, type, and abbreviation in Excel--round 1, redo in R if time
-# run the hospital level graphs after the monthly graphs
-############
+#call packages into workspace
 library(Rcpp)
 library(ggplot2)
 library(scales)
@@ -13,27 +11,26 @@ library(gridExtra)
 library(gtable)
 
 
-#df1 <- read.xlsx("MeasureDataDump_4_29_2014.xlsx", sheetIndex=1,colIndex=c(1:11),colClasses="character")
-# error message on java--the Excel sheet has a vlookup and pivot table and now java is throwing out of memory errors
-# changed to csv file
+#color blind option
 cb_palette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
-data_dump <- "MeasureDataDump_12_10_2014.csv"
+#dump the contents of working dir "file name" into "data_dump"
+data_dump <- "MeasureDataDump_1_16_2015.csv"
 
+#change "data_dump" to all character data type and create data frame df1
 df1 <- read.csv(data_dump,colClasses="character")
 
-#delete the look up table information on the right side of the data table
-df1 <- df1[,c(1:12)]
-
+#identify where the functions are so you can call them???
 source("functions.R")
-df2 <- clean_up_df(df1)
 
+#call the cleaning function
+df2 <- clean_up_df(df1)
 
 # checknames <- levels(df2$MeasureName)
 # levels(df2$TeamName)
 # levels(df2$AbbrevName)
 #set vector of names to loop over for writing out files
-AbbrevName <- levels(df2$AbbrevName)
+SeriesName <- levels(df2$SeriesName)
 
 # #get table of short measure names and measure types
 # df_measure_names<- read.csv("MeasureNameTable1.csv",colClasses="character")
@@ -174,3 +171,4 @@ df.hlines <- data.frame(ShortNames,medianscore)
 # write.csv(df2_team,"check.csv")
 # write.csv(df2,"check2.csv")
 # unique(ShortNames)
+

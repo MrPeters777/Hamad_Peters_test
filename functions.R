@@ -5,29 +5,64 @@ reverse_order <- function(x){
   rev_order <- -1*mean(x)
 }
 
+
+clean_big <- function(x) {
+  if(x > 1800) {    
+x <- NA
+  }   
+  return(x)
+}
+vclean_big <- Vectorize(clean_big) 
+
+#make a function that compares two character strings and if they are equal, return the 2nd sting;
+#if they are not equal, return the concatenation of the first string and the 2nd string
+#clean TeamName and SeriesName into one name to by grouped by
+name_maker <- function(x,y) {
+  if(identical(x,y)){
+    y <- y
+  } else {
+    y <- paste0(x,"_",y) 
+  }  
+  return(y)
+}
+vname_maker <- Vectorize(name_maker)
+
+trim.trailing <- function (x) sub("\\s+$", "", x)
+
+Vtrim.trailing <- Vectorize(trim.trailing)
+
 clean_up_df <- function(df=df1){
   names(df)
-  for(i in c(2:4,9,11)){
+  
+  df$SeriesName <-  gsub("- ","-",df$SeriesName)
+  df$SeriesName <-  gsub(" -","-",df$SeriesName)
+  #df$TeamName   <-  gsub(".","",df$TeamName)
+  df$SeriesName <-  Vtrim.trailing(df$SeriesName)
+  #df$TeamName   <-  Vtrim.trailing(df$TeamName)
+  
+  
+  for(i in c(2:4,6)){
     df[,i] <- as.factor(df[,i])
   }
   
-  for(i in c(7:8,10)){
+  df$Value1<-gsub("=0","0",df$Value1)
+  
+  for(i in c(7:8)){
     df[,i] <- as.numeric(df[,i])
   }
+  #call after 7:8 trans to numeric
+  df$Value1<-vclean_big(df$Value1)
+  #switched $seriesName from TeamName
+  df$SeriesName<-vname_maker(df$TeamName,df$SeriesName)
   
   df$TimePeriod <- as.Date(df$TimePeriod,"%m/%d/%Y")
   
-  #delete Test Team from data set
-  dfZ <- droplevels(df[df$SeriesName != "Test Team",])
-  #summary(df2)
+  #delete records where Team Active Status != true from data set
+  dfZ <- droplevels(df[df$Team.Active.Status != "False",])
+  summary(dfZ)
   
-  #drop measure of HCAHPS Willingness to Recommend, SCIP VTE 6 measure and VTE/DVT Prophylaxis
-  dfZ <- droplevels(dfZ[dfZ$MeasureName != "HCAHPS Percent \"Top Box\" Willingness to Recommend", ])
-  dfZ <- droplevels(dfZ[dfZ$MeasureName != "Percent SCIP-VTE-6 Hospital Acquired Potentially-Preventable Venous Thrombolism",])
-  dfZ <- droplevels(dfZ[dfZ$MeasureName != "Percent VTE/DVT Prophylaxis",])
-  
-  
-  dfZ$AbbrevName <- reorder(dfZ$AbbrevName,dfZ$Volume,reverse_order)
+  #dfZ$AbbrevName <- reorder(dfZ$AbbrevName,dfZ$Volume,reverse_order)
+  #assign MeasureName_ID as internal integer identifier
   dfZ$MeasureName_ID <- as.numeric(dfZ$MeasureName)
   return(dfZ)
 }

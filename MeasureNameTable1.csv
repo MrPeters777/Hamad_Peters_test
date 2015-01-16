@@ -1,25 +1,56 @@
 Extranet Name,NewName,NewName2,MeasureType
-30-day all cause Readmission Count THA,THA 30-day Readmit Count,THA 30-day Readmit Count,CountLow
-30-day all cause Readmission Count TKA,TKA 30-day Readmit Count,TKA 30-day Readmit Count,CountLow
-30-day all cause Readmission Rate THA,THA 30-day R. Rate,THA 30-day R. Rate,Percent
-30-day all cause Readmission Rate TKA,TKA 30-day R. Rate,TKA 30-day R. Rate,Percent
-Average LOS THA,THA LOS,THA LOS,Days
-Average LOS TKA,TKA LOS,TKA LOS,Days
-Number of Patients with THA,THA N,THA N,CountHi
-Number of Patients with TKA,TKA N,TKA N,CountHi
-Percent Discharged Home THA,THA PctDxHome,THA Pct Dx Home,Percent
-Percent Discharged Home TKA,TKA PctDxHome,TKA Pct Dx Home,Percent
-Percent Discharged to rehab - inpatient THA,THA PctDxRehab,THA Pct Dx Rehab,Percent
-Percent Discharged to rehab - inpatient TKA,TKA PctDxRehab,TKA Pct Dx Rehab,Percent
-Percent Discharged to rehab - SNF THA,THA PctDxSNF,THA Pct Dx SNF,Percent
-Percent Discharged to rehab - SNF TKA,TKA PctDxSNF,TKA Pct Dx SNF,Percent
-Percent Pre-Surgery PRO Administration,All PctPROPre,All PctPRO PreOp,Percent
-Percent SCIP-Inf-3d Antibiotics stopped at 24 hours THA,THA PctSCIP3,THA Pct SCIP3,Percent
-Percent SCIP-Inf-3d Antibiotics stopped at 24 hours TKA,TKA PctSCIP3,TKA Pct SCIP3,Percent
-Percent SCIP-Inf-2d Appropriate Antibiotic THA,THA PctSCIP2,THA Pct SCIP2,Percent
-Percent SCIP-Inf-2d Appropriate Antibiotic TKA,TKA PctSCIP2,TKA Pct SCIP2,Percent
-Percent SCIP-Inf-1d Antibiotics given within 1 hour THA,THA PctSCIP1,THA Pct SCIP1,Percent
-Percent SCIP-Inf-1d Antibiotics given within 1 hour TKA,TKA PctSCIP1,TKA Pct SCIP1,Percent
-Percent THA Patients with PRO before surgery,THA PctPROPre,THA Pct PRO PreOp,Percent
-Percent TKA Patients with PRO before surgery,TKA PctPROPre,TKA Pct PRO PreOp,Percent
-,,,
+CCB01 - Percent of unplanned readmissions into the ICU within 48 hours post discharge from the ICU,CCB01,CCB01,Percent
+CCO01 - VAP Rate,CCO01,CCO01,Rate
+CCO04 - Central Line Bloodstream Infection Rate (CLABSI),CCO04,CCO04,Rate
+CCO05 - Days Between a Central Line Bloodstream Infection,CCO05,CCO05,Rate
+CCO06 - Incidence (rate) of inpatient hospital-onset Clostridium difficile Infection (CDI),CCO06,CCO06,Rate
+CCO07 - Days between a C. difficile associated disease occurrence,CCO07,CCO07,Rate
+CCO10 - Urinary catheter-associated symptomatic urinary tract infections rate,CCO10,CCO10,Rate
+GWO01 - Incidence (rate) of inpatient hospital-onset Clostridium Difficile Infection (CDI),GWO01,GWO01,Rate
+GWO04 - Days between Staph. aureus Bacteraemias,GWO04,GWO04,Rate
+GWO05 - Urinary catheter-associated urinary tract infections rate,GWO05,GWO05,Rate
+GWO07 - Pressure ulcer count,GWO07,GWO07,CountLow
+GWP02 - Percent compliance with the urinary catheter insertion bundle,GWP02,GWP02,Percent
+GWP06 - Percent achievement of multi-disciplinary rounds(MDRs),GWP06,GWP06,Percent
+GWP07 - Percent achievement of multi-disciplinary rounds and daily goals (DG),GWP07,GWP07,Percent
+GWP09 - Percent of RN-doctor exchanges about patients with a change in condition that were based on an SBAR format,GWP09,GWP09,Percent
+POO01 - Percent of surgical patients developing a Surgical Site Infection (SSI),POO01,POO01,Percent
+POP01 - Percent on-time prophylactic antibiotics administration,POP01,POP01,Percent
+POP02 - Percent of inpatient surgical patients requiring hair removal for whom the hair at the operation site was removed with clippers (shaving is not recommended),POP02,POP02,Percent
+POP03 - Percent of known diabetic surgical patients with perioperative glucose control,POP03,POP03,Percent
+POP04 - Percent of eligible surgical patients with perioperative normothermia,POP04,POP04,Percent
+CCO02 - Days Between a VAP,CCO02,CCO02,Daysbtw
+CCO08 - Incidence (rate) of inpatient hospital-onset Methicillin-resistant Staphylococcus Aureus,CCO08,CCO08,Rate
+CCO11 - Pressure ulcer count,CCO11,CCO11,CountLow
+CCP01 - Percent compliance with the VAP bundle,CCP01,CCP01,Percent
+CCP02 - Percent compliance with central line insertion bundle,CCP02,CCP02,Percent
+CCP05 - Percent compliance with the urinary catheter insertion bundle,CCP05,CCP05,Percent
+CCP13 - Percent of patients assessed for risk of a VTE,CCP13,CCP13,Percent
+CCP14 - Percent of patients assessed with a high risk for a VTE who received appropriate follow-up treatment,CCP14,CCP14,Percent
+L01 - Number of WalkRounds Completed,L01,L01,CountLow
+L02 - Number of actionable items identified during WalkRounds,L02,L02,CountLow
+L03 - Percent of actionable items identified during WalkRounds that are completed,L03,L03,Percent
+GWO02 - Days between a C. difficile associated disease occurrence,GWO02,GWO02,Daysbtw
+GWO03 - Incidence (rate) of inpatient hospital-onset Methicillin-resistant Staph. aureus,GWO03,GWO03,Rate
+GWP01 - Percent compliance with hand hygiene,GWP01,GWP01,Percent
+GWP03 - Percent compliance of patients deemed “at risk” receiving the full pressure ulcer prevention bundle,GWP03,GWP03,Percent
+GWP04 - Percent of patients receiving daily pressure ulcer risk reassessment,GWP04,GWP04,Percent
+GWP15 - Percent of patients assessed for risk of a VTE,GWP15,GWP15,Percent
+GWP16 - Percent of patients assessed with a high risk for a VTE who received appropriate follow-up treatment,GWP16,GWP16,Percent
+POO02 - The number of surgical cases without a SSI,POO02,POO02,CountLow
+POP05b - Percent of elective surgical lists with complete pre-surgical briefings,POP05B,POP05B,Percent
+POP06b - Percent of elective surgical cases with a complete WHO surgical checklist,POP06B,POP06B,Percent
+POP08 - Percent of patients assessed for risk of a VTE,POP08,POP08,Percent
+POP09 - Percent of patients assessed with a high risk for a VTE who received appropriate follow-up treatment,POP09,POP09,Percent
+CCO03 - Percent Reintubation,CCO03,CCO03,Percent
+CCO09 - Days between Staph. Aureus Bacteraemias,CCO09,CCO09,Daysbtw
+CCP03 - Percent compliance with central venous catheter (CVC) maintenance bundle,CCP03,CCP03,Percent
+CCP04 - Percent compliance with hand hygiene,CCP04,CCP04,Percent
+CCP11 - Percent achievement of multi-disciplinary rounds,CCP11,CCP11,Percent
+CCP12 - Percent achievement of multi-disciplinary rounds and daily goals (DG),CCP12,CCP12,Percent
+GWP08 - Percent compliance with using daily safety briefings,GWP08,GWP08,Percent
+CCP06 - Percent compliance of patients deemed “at risk” receiving the full pressure ulcer prevention bundle,CCP06,CCP06,Percent
+CCP07 - Percent of patients receiving daily pressure ulcer risk reassessment,CCP07,CCP07,Percent
+CCP08 - Percent compliance with Severe Sepsis 3-Hour Resuscitation Bundle,CCP08,CCP08,Percent
+CCP09 - Percent compliance with 6-Hour Septic Shock Bundle,CCP09,CCP09,Percent
+POP07 - Percent of surgical patients on maintenance beta blockade who were continued on beta blockade,POP07,POP07,Percent
