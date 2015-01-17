@@ -53,7 +53,8 @@ clean_up_df <- function(df=df1){
   #call after 7:8 trans to numeric
   df$Value1<-vclean_big(df$Value1)
   #switched $seriesName from TeamName
-  df$SeriesName<-vname_maker(df$TeamName,df$SeriesName)
+  #KL 17 Jan 2015 looks like the output from vname_maker is a character vector, so have to force df$SeriesName back to factor
+  df$SeriesName<-as.factor(vname_maker(df$TeamName,df$SeriesName))
   
   df$TimePeriod <- as.Date(df$TimePeriod,"%m/%d/%Y")
   
