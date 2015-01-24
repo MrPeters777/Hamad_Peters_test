@@ -59,7 +59,7 @@ levels(df2$MeasureType)
 ShortNames <- sapply(df2$MeasureName,short_name)
 df2$ShortNames <- as.factor(ShortNames)
 
-#remove the measures Pct VTE prophylaxis and overall PRO measure?
+#keep only rows with complete cases
 df2 <- df2[complete.cases(df2$ShortNames),]
 
 # #Test of subsettting by hospital name
@@ -70,6 +70,7 @@ newdir <- paste0("Extranet graphs by Hospital_",format(Sys.time(),"%Y-%m-%d-%H-%
 dir.create(paste0(getwd(),"/",newdir))
 
 #loop through the hospitals
+#KL 17 Jan 2015 need to define a short name for each of the hospital series to label the files correctly
 
 for(i in 1:length(AbbrevName)){
   df2_team <- droplevels(df2[df2$AbbrevName == AbbrevName[i],])
