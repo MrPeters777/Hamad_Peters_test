@@ -60,7 +60,6 @@ clean_up_df <- function(df=df1){
   
   #delete records where Team Active Status != true from data set
   dfZ <- droplevels(df[df$Team.Active.Status != "False",])
-  summary(dfZ)
   
   #dfZ$AbbrevName <- reorder(dfZ$AbbrevName,dfZ$Volume,reverse_order)
   #assign MeasureName_ID as internal integer identifier

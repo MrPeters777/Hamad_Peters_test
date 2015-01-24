@@ -32,22 +32,6 @@ df2 <- clean_up_df(df1)
 #set vector of names to loop over for writing out files
 SeriesName <- levels(df2$SeriesName)
 
-# #get table of short measure names and measure types
-# df_measure_names<- read.csv("MeasureNameTable1.csv",colClasses="character")
-# 
-# measure_type <- function(x,df=df_measure_names) {
-#   #given a measure name x, looks up measure type in table contained in df
-#   dfA <- df[df$Extranet.Name==x,]
-#   measure_type <- dfA$MeasureType[1]
-# }
-# 
-# 
-# short_name <- function(x,df=df_measure_names) {
-#   #given a measure name x, looks up a short measure name
-#   dfB <- df[df$Extranet.Name==x,]
-#   short_name <- dfB$NewName2[1]
-# }
-
 # test <- measure_type(checknames[1])
 # check2 <- df2[,c(3,12,13)]
 # head(check2,40)
@@ -59,7 +43,7 @@ levels(df2$MeasureType)
 ShortNames <- sapply(df2$MeasureName,short_name)
 df2$ShortNames <- as.factor(ShortNames)
 
-#keep only rows with complete cases
+#keep only rows with complete cases    TAKE the ROWS of ShortNames and make sure not NULL, remove from table
 df2 <- df2[complete.cases(df2$ShortNames),]
 
 # #Test of subsettting by hospital name
